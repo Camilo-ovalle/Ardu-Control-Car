@@ -1,23 +1,19 @@
 # Ardu-Control-Car
-Ardu-Control-Car creation
+Ardu-green-Car creation
+<main>
+<h1>Descripción</h1>
 
-<h1>Estructura de trabajo y tareas</h1>
+<p>Tradicionalmente el campo de la agricultura tiende a desarrollar sus actividades de manera manual y dependiente de personas para su escalabilidad, por lo que la siembra de productos está ligada a la capacidad física de los agricultores para desempeñar dicha tarea.<br> </p>
 
+<p>Con lo anterior expuesto, nos proponemos crear un carrito enfocado a la agricultura que sea capaz de avanzar por terrenos difíciles y pueda ir sembrando semillas mientras avanza, con el fin de automatizar las labores de siembra y ayudar a la reducción de costos para los agricultores disminuyendo el uso de personal humano.</p>
 
-<h2>Chasis y estructura del carro</h2>
+<h2>Objetivos</h2>
 
-<p>En primer lugar, la idea es diseñar un chasis que sea ligero y fácil de armar, por lo que se puede usar cilicona, poliuretano, o cartón piedra, tambien hay que diseñarlo teniendo en cuenta que las dimensiones máximas sean de 20 x 10 para maximizar la velocidad alcanzada</p>
-
-<p>Responsables: Julián y David </p>
-
-<h2>Diagrama de flujo de funcionamiento</h2>
-
-<p>En segundo lugar, hay que diseñar la lógica del funcionamiento del carrito, generando un diagrama de flujo detallado en PSeint</p>
-
-<p>Responsables: Paula</p>
-
-<h2>Generación y disño de codigo de funcionamiento para arduino</h2>
-
-<p>Por último, el teniendo el diagrama de flujo, vamos a generar el código de funcionamiento del carrito con Arduino nano, esto tendrá participación de todo el equipo y será liderado por Camilo y Gonzalo </p>
-
-<p>Responsables: Camilo y Gonzalo</p>
+<div>
+<lu>
+    <li>Desarrollar un robot autónomo que pueda ejecutar las labores de agricultura.</li>
+    <li>Innovar en el campo de la agricultura agregando escalabilidad a través de la tecnología</li>
+    <li>Crear un proyecto de código abierto para facilitar el acceso del mismo a la comunidad agricultora.</li>
+</lu>
+</div>
+</main>
