@@ -1,7 +1,8 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial miBT(2, 3);
+SoftwareSerial miBT(0, 1);
 char DATO;
+int move;
 // Definimos los pines de entrada del L298N
 const int IN1_MOTOR_A_RETRO = 9;
 const int IN2_MOTOR_A_AVA = 10;
@@ -41,38 +42,69 @@ void loop() {
         if(miBT.available()){
         DATO = miBT.read();
 
+
         Serial.println(DATO);
 
-        if(DATO == 'w'){
-          delay(100);
+        switch (DATO)
+        {
+        case 'w':
+          
           digitalWrite(IN2_MOTOR_A_AVA, HIGH);
           digitalWrite(IN3_MOTOR_B_AVA, HIGH);
           digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, LOW);
+          //delay(100);
+          break;
+        case 's':
+          
+          digitalWrite(IN2_MOTOR_A_AVA, LOW);
+          digitalWrite(IN3_MOTOR_B_AVA, LOW);
+          digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
+          digitalWrite(IN4_MOTOR_B_RETRO, HIGH);
+          //delay(100);
+          break;
+        case 'a':
+          
+          digitalWrite(IN2_MOTOR_A_AVA, LOW);
+          digitalWrite(IN3_MOTOR_B_AVA, HIGH);
+          digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
+          digitalWrite(IN4_MOTOR_B_RETRO, LOW);
+          delay(1000);
 
-        }else if(DATO == 's'){
-          delay(100);
           digitalWrite(IN2_MOTOR_A_AVA, LOW);
           digitalWrite(IN3_MOTOR_B_AVA, LOW);
-          digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
-          digitalWrite(IN4_MOTOR_B_RETRO, HIGH);
-        }else if(DATO == 'a'){
-          delay(100);
-          digitalWrite(IN2_MOTOR_A_AVA, LOW);
-          digitalWrite(IN3_MOTOR_B_AVA, HIGH);
-          digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
+          digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, LOW);
-        }else if(DATO == 'd'){
-          delay(100);
+          break;
+        case 'd':
+          
           digitalWrite(IN2_MOTOR_A_AVA, HIGH);
           digitalWrite(IN3_MOTOR_B_AVA, LOW);
           digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, HIGH);
-        }else if(SENSOR == LOW){
+          delay(1000);
+
           digitalWrite(IN2_MOTOR_A_AVA, LOW);
           digitalWrite(IN3_MOTOR_B_AVA, LOW);
           digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, LOW);
+          break;
+        case 'q':
+          
+          digitalWrite(IN2_MOTOR_A_AVA, LOW);
+          digitalWrite(IN3_MOTOR_B_AVA, LOW);
+          digitalWrite(IN1_MOTOR_A_RETRO, LOW);
+          digitalWrite(IN4_MOTOR_B_RETRO, LOW);
+          //delay(100);
+          break;
+        default:
+          
+          digitalWrite(IN2_MOTOR_A_AVA, LOW);
+          digitalWrite(IN3_MOTOR_B_AVA, LOW);
+          digitalWrite(IN1_MOTOR_A_RETRO, LOW);
+          digitalWrite(IN4_MOTOR_B_RETRO, LOW);
+          //delay(100);
+          break;
         }
       }
 
