@@ -44,26 +44,35 @@ void loop() {
         Serial.println(DATO);
 
         if(DATO == 'w'){
+          delay(100);
           digitalWrite(IN2_MOTOR_A_AVA, HIGH);
           digitalWrite(IN3_MOTOR_B_AVA, HIGH);
           digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, LOW);
 
         }else if(DATO == 's'){
+          delay(100);
           digitalWrite(IN2_MOTOR_A_AVA, LOW);
           digitalWrite(IN3_MOTOR_B_AVA, LOW);
           digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
           digitalWrite(IN4_MOTOR_B_RETRO, HIGH);
         }else if(DATO == 'a'){
+          delay(100);
           digitalWrite(IN2_MOTOR_A_AVA, LOW);
           digitalWrite(IN3_MOTOR_B_AVA, HIGH);
           digitalWrite(IN1_MOTOR_A_RETRO, HIGH);
           digitalWrite(IN4_MOTOR_B_RETRO, LOW);
         }else if(DATO == 'd'){
+          delay(100);
           digitalWrite(IN2_MOTOR_A_AVA, HIGH);
           digitalWrite(IN3_MOTOR_B_AVA, LOW);
           digitalWrite(IN1_MOTOR_A_RETRO, LOW);
           digitalWrite(IN4_MOTOR_B_RETRO, HIGH);
+        }else if(SENSOR == LOW){
+          digitalWrite(IN2_MOTOR_A_AVA, LOW);
+          digitalWrite(IN3_MOTOR_B_AVA, LOW);
+          digitalWrite(IN1_MOTOR_A_RETRO, LOW);
+          digitalWrite(IN4_MOTOR_B_RETRO, LOW);
         }
       }
 
